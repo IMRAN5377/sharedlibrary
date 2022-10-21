@@ -24,3 +24,8 @@ def call4(a,b)
   echo " hello my name is ..${a}..${b}"
 }
 
+def call5(a="sandeep")
+{
+  echo "hello my name is ${a}"
+}
+
