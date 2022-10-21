@@ -19,8 +19,8 @@ def call3(a)
   echo "hello my name is ...${a}"
 }
 
-def call4(a,b,c)
+def call4(a,b)
 {
-  echo " hello my name is ..${a}..${b}..${C}"
+  echo " hello my name is ..${a}..${b}"
 }
 
