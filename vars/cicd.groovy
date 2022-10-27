@@ -10,5 +10,5 @@ def deploy(jobname,ip,context)
 {
   def run selinium(jobname)
   {
-    sh "java -jar var/lib/jenkins/workspace/${jobname}/testing.jar"
+    sh "scp|war|lib|workspace/${jobname}/webapp/target/webapp.war ubuntu@ ${ip} |var|lib|tomcat9|webapp/{${context}."war"
   }
