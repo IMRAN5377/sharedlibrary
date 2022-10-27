@@ -2,30 +2,13 @@ def newGit(repo)
 {
   git"${repo}"
 }
-
-
-def call1()
+def newMaven()
 {
-  echo "hello i am call-1"
+  sh 'mvn package'
 }
-
-def call2()
+def deploy(jobname,ip,context)
 {
-  sh 'echo "hello i am call-2"'
-}
-
-def call3(a)
-{
-  echo "hello my name is ...${a}"
-}
-
-def call4(a,b)
-{
-  echo " hello my name is ..${a}..${b}"
-}
-
-def call5(a="sandeep")
-{
-  echo "hello my name is ${a}"
-}
-
+  def run selinium(jobname)
+  {
+    sh "java -jar var/lib/jenkins/workspace/${jobname}/testing.jar"
+  }
